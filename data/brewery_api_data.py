@@ -6,3 +6,11 @@ class BreweryApiData:
         'ef970757-fe42-416f-931d-722451f1f59c',
         '6d14b220-8926-4521-8d19-b98a2d6ec3db'
     ]
+
+    LIST_OF_BREWERY_STATES = [
+        'California',
+        'Oklahoma',
+        'Texas',
+        'Wisconsin',
+        'Ohio'
+    ]

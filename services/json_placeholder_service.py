@@ -1,12 +1,10 @@
 from base_model.base_model import BaseService
-from models.json_placeholder_model import JsonPlaceholderApiResponsePostModel, JsonPlaceholderApiResponseAlbumModel, \
-    JsonPlaceholderApiRequestCommentModel
+from models.json_placeholder_model import JsonPlaceholderApiResponsePostModel, JsonPlaceholderApiResponseAlbumModel
 
 
 class JsonPlaceholderService(BaseService):
     def __init__(self):
         self.base_url = 'https://jsonplaceholder.typicode.com/'
-
 
     def get_post_by_id(self, post_id: int):
         response = self.get(f'{self.base_url}/posts/{post_id}')

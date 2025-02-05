@@ -22,8 +22,9 @@ def test_get_display_multiple_random_images(dog_api, count):
 @pytest.mark.parametrize('breed', DogApiData.LIST_OF_BREEDS)
 def test_get_all_images_from_breed(dog_api, breed):
     response = dog_api.get_all_images_from_breed(breed)
-    for b in range(len(response.message)):
-        assert breed in response.message[b]
+    assert len(response.message) > 0
+    for got_breed in response.message:
+        assert breed in got_breed
 
 
 def test_get_all_sub_breed(dog_api):
